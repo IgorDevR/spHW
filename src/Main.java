@@ -7,7 +7,7 @@ public class Main {
         hw1(nums);
         hw2(nums);
 
-        String words = "qwe qwe ewq ewq rty asd zxc vbn jkl ";
+        List<String> words = new ArrayList<>(List.of("qwe", "qwe", "ewq", "ewq", "rty", "asd", "zxc", "vbn", "jkl"));
         hw3(words);
         hw4(words);
 
@@ -36,18 +36,17 @@ public class Main {
         System.out.println();
     }
 
-    public static void hw3(String str) {
+    public static void hw3(List<String> stringList) {
 
-        Set<String> set = new LinkedHashSet<>(Arrays.asList(str.split(" ")));
+        Set<String> set = new LinkedHashSet<>(stringList);
         for (String st : set) {
             System.out.print(st + " ");
         }
         System.out.println();
     }
 
-    public static void hw4(String str) {
+    public static void hw4(List<String> stringList) {
 
-        List<String> stringList = Arrays.asList(str.split(" "));
         Map<String, Integer> map = new HashMap<>();
 
         for (String s : stringList) {
@@ -65,7 +64,6 @@ public class Main {
                 System.out.print(m + " ");
             }
         }
-
 
     }
 
